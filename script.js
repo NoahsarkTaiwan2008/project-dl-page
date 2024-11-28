@@ -1,5 +1,3 @@
-<ul id="fileList"></ul>
-<script>
 // 取得顯示專案清單的容器
 const fileList = document.getElementById('fileList');
 
@@ -22,4 +20,11 @@ fetch('projects.json')
     .catch(error => {
         console.error('載入專案資料時發生錯誤:', error);
     });
-</script>
+
+// 取得深色模式切換按鈕
+const darkModeToggle = document.getElementById('darkModeToggle');
+
+// 監聽按鈕點擊事件以切換深色模式
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
