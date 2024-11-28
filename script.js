@@ -1,28 +1,22 @@
-// 專案清單資料
-const files = [
-    { name: 'Project 1', description: 'A modern UI project for beginners.', link: '#1' },
-    { name: 'Project 2', description: 'An intermediate-level app template.', link: '#2' },
-    { name: 'Project 3', description: 'Advanced features for experienced developers.', link: '#3' },
-    { name: 'Project 4', description: 'Responsive and accessible web design.', link: '#4' },
-];
-
-// 動態生成專案卡片
+// 取得顯示專案清單的容器
 const fileList = document.getElementById('fileList');
 
-files.forEach(file => {
-    const item = document.createElement('li');
-    item.className = 'file-item';
-    item.innerHTML = `
-        <h2>${file.name}</h2>
-        <p>${file.description}</p>
-        <button onclick="window.location.href='${file.link}'">Download</button>
-    `;
-    fileList.appendChild(item);
-});
-
-// 深色模式切換
-const darkModeToggle = document.getElementById('darkModeToggle');
-
-darkModeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-});
+// 使用 Fetch API 從 projects.json 載入資料
+fetch('projects.json')
+    .then(response => response.json())
+    .then(data => {
+        // 根據載入的資料生成專案項目
+        data.files.forEach(file => {
+            const item = document.createElement('li');
+            item.className = 'file-item';
+            item.innerHTML = `
+                <h2>${file.name}</h2>
+                <p>${file.description}</p>
+                <button onclick="window.location.href='${file.link}'">Download</button>
+            `;
+            fileList.appendChild(item);
+        });
+    })
+    .catch(error => {
+        console.error('載入專案資料時發生錯誤:', error);
+    });
