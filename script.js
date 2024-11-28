@@ -1,3 +1,5 @@
+<ul id="fileList"></ul>
+<script>
 // 取得顯示專案清單的容器
 const fileList = document.getElementById('fileList');
 
@@ -12,7 +14,7 @@ fetch('projects.json')
             item.innerHTML = `
                 <h2>${file.name}</h2>
                 <p>${file.description}</p>
-                <button onclick="window.location.href='${file.link}'">Download</button>
+                <a href="${file.link}" target="_blank"><button>Download</button></a>
             `;
             fileList.appendChild(item);
         });
@@ -20,3 +22,4 @@ fetch('projects.json')
     .catch(error => {
         console.error('載入專案資料時發生錯誤:', error);
     });
+</script>
