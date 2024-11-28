@@ -3,6 +3,6 @@
         { "name": "Project 1", "description": "A modern UI project for beginners.", "link": "#1" },
         { "name": "Project 2", "description": "An intermediate-level app template.", "link": "#2" },
         { "name": "Project 3", "description": "Advanced features for experienced developers.", "link": "#3" },
-        { "name": "google", "description": "Responsive and accessible web design.", "link": "www.google.com" }
+        { "name": "google", "description": "Responsive and accessible web design.", "link": "https://www.google.com" }
     ]
 }
