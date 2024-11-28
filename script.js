@@ -12,7 +12,10 @@ fetch('projects.json')
             item.innerHTML = `
                 <h2>${file.name}</h2>
                 <p>${file.description}</p>
-                <a href="${file.link}" target="_blank"><button>Download</button></a>
+                <div class="button-container">
+                    <a href="${file.link}" target="_blank"><button><i class="fas fa-download"></i></button></a>
+                    <a href="${file.github}" target="_blank"><button><i class="fab fa-github"></i></button></a>
+                </div>
             `;
             fileList.appendChild(item);
         });

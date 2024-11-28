@@ -1,8 +1,10 @@
 {
     "files": [
-        { "name": "Project 1", "description": "A modern UI project for beginners.", "link": "https://github.com/NoahsarkTaiwan2008/website/archive/refs/heads/main.zip" },
-        { "name": "Project 2", "description": "An intermediate-level app template.", "link": "#2" },
-        { "name": "Project 3", "description": "Advanced features for experienced developers.", "link": "#3" },
-        { "name": "google", "description": "Responsive and accessible web design.", "link": "https://www.google.com" }
+        { 
+            "name": "Youtube video downloader", 
+            "description": "很陽春的Youtube影片下載器", 
+            "link": "https://github.com/NoahsarkTaiwan2008/yt_downloader/releases/download/v1.0.0/youtube-downloader.exe",
+            "github": "https://github.com/NoahsarkTaiwan2008/yt_downloader"
+        }
     ]
 }
