@@ -4,13 +4,15 @@
             "name": "Youtube video downloader", 
             "description": "很陽春的Youtube影片下載器", 
             "link": "https://github.com/NoahsarkTaiwan2008/yt_downloader/releases/download/v1.0.0/youtube-downloader.exe",
-            "github": "https://github.com/NoahsarkTaiwan2008/yt_downloader"
+            "github": "https://github.com/NoahsarkTaiwan2008/yt_downloader",
+            "os": "windows"
         },
         { 
             "name": "python venv setup", 
             "description": "簡單的python虛擬環境生成器", 
             "link": "https://github.com/NoahsarkTaiwan2008/py-venv-setup/releases/download/1.0.0/setup_venv.exe",
-            "github": "https://github.com/NoahsarkTaiwan2008/py-venv-setup"
+            "github": "https://github.com/NoahsarkTaiwan2008/py-venv-setup",
+            "os": "windows"
         }
     ]
 }

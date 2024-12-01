@@ -9,8 +9,25 @@ fetch('projects.json')
         data.files.forEach(file => {
             const item = document.createElement('li');
             item.className = 'file-item';
+
+            // 根據專案的 os 屬性決定顯示的 icon
+            let osIcon = '';
+            switch (file.os) {
+                case 'windows':
+                    osIcon = '<i class="fab fa-windows"></i>';
+                    break;
+                case 'mac':
+                    osIcon = '<i class="fab fa-apple"></i>';
+                    break;
+                case 'linux':
+                    osIcon = '<i class="fab fa-linux"></i>';
+                    break;
+                default:
+                    osIcon = '';
+            }
+
             item.innerHTML = `
-                <h2>${file.name}</h2>
+                <h2>${file.name} ${osIcon}</h2>
                 <p>${file.description}</p>
                 <div class="button-container">
                     <a href="${file.link}" target="_blank"><button><i class="fas fa-download"></i></button></a>
@@ -57,4 +74,4 @@ userPrefersDark.addEventListener('change', (e) => {
     } else {
         document.body.classList.remove('dark-mode');
     }
-});
+})
