@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chmod Tool</title>
+    <link rel="stylesheet" href="chmodTool.css">
+    <link rel="stylesheet" href="../header.css">
+</head>
+<body>
+    <h1>chmod Tool</h1>
+    <div>
+        <label for="filename">檔案名稱：</label>
+        <input type="text" id="filename" value="owo.txt" oninput="updateUI()">
+    </div>
+    <div class="command" id="command">chmod 000 owo.txt</div>
+    <div class="details" id="details">目前存取權：---------</div>
+    
+    <div class="setbutton">
+        <button onclick="copyCommand()">複製指令</button>
+        <button onclick="resetAllPermissions()">全部重置</button>
+    </div>
+
+    <div class="permissions">
+        <div class="permission-group">
+            <h3>擁有者</h3>
+            <button onclick="togglePermission(0, 'r')">讀取 (r)</button>
+            <button onclick="togglePermission(1, 'w')">寫入 (w)</button>
+            <button onclick="togglePermission(2, 'x')">執行 (x)</button>
+            <button onclick="togglePermission(0, '-')">無權限</button>
+            <button onclick="resetPermissions(0)">重置</button>
+            <button onclick="setMaxPermissions(0)">最大權限</button>
+        </div>
+        <div class="permission-group">
+            <h3>群組</h3>
+            <button onclick="togglePermission(3, 'r')">讀取 (r)</button>
+            <button onclick="togglePermission(4, 'w')">寫入 (w)</button>
+            <button onclick="togglePermission(5, 'x')">執行 (x)</button>
+            <button onclick="togglePermission(3, '-')">無權限</button>
+            <button onclick="resetPermissions(1)">重置</button>
+            <button onclick="setMaxPermissions(1)">最大權限</button>
+        </div>
+        <div class="permission-group">
+            <h3>其他人</h3>
+            <button onclick="togglePermission(6, 'r')">讀取 (r)</button>
+            <button onclick="togglePermission(7, 'w')">寫入 (w)</button>
+            <button onclick="togglePermission(8, 'x')">執行 (x)</button>
+            <button onclick="togglePermission(6, '-')">無權限</button>
+            <button onclick="resetPermissions(2)">重置</button>
+            <button onclick="setMaxPermissions(2)">最大權限</button>
+        </div>
+    </div>
+
+    <a href="../index.html" class="backToHome">Back to Home</a>
+
+    <script src="chmodTool.js"></script>
+</body>
+</html>

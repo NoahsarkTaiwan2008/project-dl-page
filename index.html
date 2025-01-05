@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project download</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -15,18 +16,25 @@
         <div class="header-buttons">
             <a id="main-website" href="https://noahsarktw.com" class="button"><i class="fas fa-home"></i></a>
             <button id="darkModeToggle" class="button"><i class="fas fa-adjust"></i></button>
+            <button id="toolsButton" class="button"><i class="fas fa-tools"></i></button>
         </div>
     </header>
 
     <main class="container">
         <ul class="file-list" id="fileList">
-            <!-- JavaScript will populate this area -->
+
         </ul>
     </main>
 
     <footer>
         &copy; <a href="https://github.com/NoahsarkTaiwan2008">Hikari</a> All rights reserved.
     </footer>
+
+    <div id="toolsPopup" class="popup">
+        <ul>
+            <li><a href="chmod-tool/chmod.html">chmod Tool</a></li>
+        </ul>
+    </div>
 
     <script src="script.js"></script>
 </body>
