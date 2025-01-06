@@ -16,6 +16,7 @@ h1 {
     display: flex;
     justify-content: center;
     margin: 20px 0;
+    flex-wrap: wrap;
 }
 
 .permission-group {
@@ -122,4 +123,52 @@ button:active {
 .backToHome:active {
     transform: scale(0.95);
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .permissions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .permission-group {
+        margin: 10px 0;
+    }
+
+    .command {
+        font-size: 20px;
+    }
+
+    .details {
+        font-size: 12px;
+    }
+
+    button, .permission-group button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .setbutton {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        justify-items: center;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .backToHome {
+        position: static;
+        margin: 20px 0;
+    }
 }
